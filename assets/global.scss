@@ -1,0 +1,18 @@
+@import 'spaces';
+@import 'colors';
+@import 'fonts';
+@import 'variables';
+
+html {
+  background: $ui-01;
+  color: $text-01;
+
+  a {
+    color: $link-01;
+  }
+
+  &.dark-mode {
+    background: $ui-02;
+    color: $text-02;
+  }
+}
