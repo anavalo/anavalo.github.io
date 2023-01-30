@@ -21,7 +21,7 @@ const colorMode = useColorMode();
 .wrapper {
   display: flex;
   gap: $space-16;
-  height: $navbar-height;
+  height: $space-40;
 }
 
 .link {
