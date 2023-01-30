@@ -10,9 +10,8 @@
   "devDependencies": {
     "nuxt": "^3.1.0",
     "sass": "^1.57.1",
-    "sass-loader": "^10.4.1"
-  },
-  "dependencies": {
+    "sass-loader": "^10.4.1",
     "@nuxtjs/color-mode": "^3.2.0"
-  }
+  },
+  "dependencies": {}
 }

@@ -15,6 +15,8 @@
 
 <script setup>
 const colorMode = useColorMode();
+
+const x = computed(() => colorMode.value);
 </script>
 
 <style lang="scss">
