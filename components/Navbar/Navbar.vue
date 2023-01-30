@@ -14,9 +14,8 @@
 </template>
 
 <script setup>
+import { useColorMode } from '@nuxtjs/color-mode';
 const colorMode = useColorMode();
-
-const x = computed(() => colorMode.value);
 </script>
 
 <style lang="scss">
