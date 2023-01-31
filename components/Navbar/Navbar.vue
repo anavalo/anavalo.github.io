@@ -18,8 +18,6 @@ const colorMode = useColorMode();
 </template>
 
 <style lang="scss">
-@import '@/assets/variables.scss';
-
 .wrapper {
   display: flex;
   gap: $space-16;
