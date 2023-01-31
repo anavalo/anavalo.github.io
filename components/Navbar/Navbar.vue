@@ -11,9 +11,7 @@ const colorMode = useColorMode();
         <option value="dark">Dark</option>
       </select>
     </div>
-    <span class="link">hello</span>
-    <span class="link">blog</span>
-    <span class="link">projects</span>
+    <span class="link"><NuxtLink to="/blog">blog</NuxtLink></span>
   </div>
 </template>
 

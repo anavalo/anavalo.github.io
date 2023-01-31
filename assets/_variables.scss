@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+
+$font-primary: 'Inter', sans-serif;
+
 //colors
 $base-color-1-light: #3b6068;
 $base-color-1-main: #2a454b;
@@ -24,8 +28,9 @@ $ui-02: $base-color-1-main;
 
 $text-01: $base-color-1-dark;
 $text-02: $base-color-3-light;
+$text-03: $base-color-5-main;
 
-$link-01: $base-color-2-dark;
+$link-01: $base-color-2-main;
 
 //spacing
 
@@ -56,15 +61,28 @@ $space-2: 0.125rem;
 
 //fonts
 @mixin heading-regular {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   font-size: $space-20;
   font-weight: 400;
   letter-spacing: 0;
   line-height: $space-24;
 }
 
+@mixin heading-huge {
+  font-family: $font-primary;
+  font-size: $space-80;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: $space-80;
+}
+
+@mixin heading-huge-italic {
+  @include heading-huge;
+  font-style: italic;
+}
+
 @mixin label-regular {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   font-size: $space-12;
   font-weight: 400;
   letter-spacing: 0;
@@ -72,7 +90,7 @@ $space-2: 0.125rem;
 }
 
 @mixin body-regular {
-  font-family: var(--font-primary);
+  font-family: $font-primary;
   font-size: $space-16;
   font-weight: 400;
   letter-spacing: 0;
