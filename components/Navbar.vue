@@ -15,8 +15,9 @@ const colorMode = useColorMode();
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .wrapper {
+  grid-row: 1;
   display: flex;
   gap: $space-16;
   height: $space-40;

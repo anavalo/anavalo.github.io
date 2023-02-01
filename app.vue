@@ -11,3 +11,8 @@ useServerSeoMeta({
   ogImage: 'https://anavalo.com/tasos.jpeg',
 });
 </script>
+
+<style>
+.kgb {
+}
+</style>
