@@ -1,16 +1,22 @@
 <template>
-  <div :class="[cssArray]">
+  <div :class="[`card_wrapper ${colorMode.value}`]">
     <slot />
   </div>
 </template>
 
 <script setup>
 const colorMode = useColorMode();
-const cssArray = computed(() => {
-  return colorMode.value === 'dark'
-    ? 'card_wrapper dark'
-    : 'card_wrapper light';
-});
+
+// let cssArray = computed(() => {
+//   return colorMode.value === 'dark'
+//     ? 'card_wrapper dark'
+//     : 'card_wrapper light';
+// });
+
+// onMounted(() => {
+//   cssArray = `card_wrapper ${colorMode.value}`;
+//   console.log(cssArray);
+// });
 </script>
 
 <style lang="scss" scoped>
