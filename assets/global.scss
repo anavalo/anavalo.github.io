@@ -3,13 +3,28 @@
 html {
   background: $ui-01;
   color: $text-01;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 
   a {
     color: $link-01;
+    text-decoration: none;
   }
 
   &.dark-mode {
     background: $ui-02;
     color: $text-02;
+  }
+
+  body {
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+  }
+
+  #__nuxt {
+    height: 100%;
+    overflow-x: hidden;
   }
 }
