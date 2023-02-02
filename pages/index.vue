@@ -1,11 +1,29 @@
 <template>
-  <Card>card context</Card>
+  <Card>
+    <div class="inner_card_wrapper">
+      <div class="left">
+        <Avatar />
+        <span class="title">this is it</span>
+      </div>
+    </div>
+  </Card>
 </template>
 
 <style lang="scss" scoped>
-.intro_wrapper {
+.inner_card_wrapper {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: $space-64;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: $space-16;
+
+    .title {
+      @include heading-huge;
+
+      color: $text-03;
+    }
+  }
 }
 </style>

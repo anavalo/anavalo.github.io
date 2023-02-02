@@ -6,17 +6,6 @@
 
 <script setup>
 const colorMode = useColorMode();
-
-// let cssArray = computed(() => {
-//   return colorMode.value === 'dark'
-//     ? 'card_wrapper dark'
-//     : 'card_wrapper light';
-// });
-
-// onMounted(() => {
-//   cssArray = `card_wrapper ${colorMode.value}`;
-//   console.log(cssArray);
-// });
 </script>
 
 <style lang="scss" scoped>
@@ -26,6 +15,7 @@ const colorMode = useColorMode();
   margin: $space-64;
   width: calc(100% - #{$space-128});
   height: calc(100% - #{$space-128});
+  max-width: 1000px;
 
   &.dark {
     background: $ui-03;
