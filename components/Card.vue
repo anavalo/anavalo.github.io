@@ -1,10 +1,7 @@
 <template>
   <div
     class="card_wrapper"
-    :class="[
-      { dark: colorMode.value === 'dark' },
-      // { light: colorMode.value === 'light' },
-    ]"
+    :class="[{ light: colorMode.preference === 'light' }]"
   >
     <slot />
   </div>
@@ -12,6 +9,9 @@
 
 <script setup>
 const colorMode = useColorMode();
+onBeforeMount(() => {
+  colorMode.preference = 'system';
+});
 </script>
 
 <style lang="scss" scoped>
@@ -22,14 +22,9 @@ const colorMode = useColorMode();
   width: calc(100% - #{$space-128});
   height: calc(100% - #{$space-128});
   max-width: 1000px;
-  background: $ui-04;
 
-  &.dark {
-    background: $ui-03;
+  &.light {
+    background: $ui-04;
   }
-
-  // &.light {
-  //   background: $ui-04;
-  // }
 }
 </style>
