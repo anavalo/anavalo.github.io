@@ -1,5 +1,11 @@
 <template>
-  <div :class="[`card_wrapper ${colorMode.value}`]">
+  <div
+    class="card_wrapper"
+    :class="[
+      { dark: colorMode.value === 'dark' },
+      // { light: colorMode.value === 'light' },
+    ]"
+  >
     <slot />
   </div>
 </template>
@@ -16,13 +22,14 @@ const colorMode = useColorMode();
   width: calc(100% - #{$space-128});
   height: calc(100% - #{$space-128});
   max-width: 1000px;
+  background: $ui-04;
 
   &.dark {
     background: $ui-03;
   }
 
-  &.light {
-    background: $ui-04;
-  }
+  // &.light {
+  //   background: $ui-04;
+  // }
 }
 </style>
