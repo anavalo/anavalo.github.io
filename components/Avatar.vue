@@ -1,27 +1,16 @@
 <template>
-  <div
-    class="img_wrapper"
-    :class="[{ light: colorMode.preference === 'light' }]"
-  >
+  <div class="img_wrapper">
     <img src="/tasos.jpeg" alt="tasos" />
   </div>
 </template>
 
-<script setup lang="ts">
-const colorMode = useColorMode();
-</script>
-
 <style lang="scss" scoped>
 .img_wrapper {
-  width: $space-128;
-  height: $space-128;
+  width: var(--space-128);
+  height: var(--space-128);
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid $ui-05;
-
-  &.light {
-    border: 2px solid $ui-01;
-  }
+  border: 2px solid var(--avatar-color);
 
   img {
     width: 100%;

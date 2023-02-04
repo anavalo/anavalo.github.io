@@ -4,10 +4,12 @@
 
 <script setup lang="ts">
 useServerSeoMeta({
-  title: 'Tasos Tsournos | tsournos.com',
-  ogTitle: 'Tasos Tsournos | tsournos.com',
+  title: 'Tasos Tsournos',
+  ogUrl: 'https://tsournos.com',
+  ogTitle: 'Tasos Tsournos',
+  author: 'Tasos Tsournos',
   description: 'Tasos codes, writes and sometimes runs',
   ogDescription: 'Tasos codes, writes and sometimes runs',
-  // ogImage: 'https://anavalo.com/tasos.jpeg',
+  viewport: { maximumScale: 1, minimumScale: 1, width: 'device-width' },
 });
 </script>
