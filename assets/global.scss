@@ -1,20 +1,29 @@
-@import 'variables';
+@use 'variables';
 
-html {
-  background: $ui-01;
-  color: $text-01;
+:root {
   height: 100%;
   overflow-x: hidden;
   box-sizing: border-box;
-
-  a {
-    color: $link-01;
-    text-decoration: none;
-  }
+  font: var(--font-primary);
+  background-color: var(--primary-color);
+  transition: background-color 0.5s;
 
   &.dark-mode {
-    background: $ui-02;
-    color: $text-02;
+    --primary-color: var(--primary-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+    --avatar-color: var(--tertiary-color);
+    --text-color: var(--tertiary-color);
+    --button-color: var(--secondary-color-dark);
+    --button-text: var(--tertiary-color);
+  }
+
+  &.light-mode {
+    --primary-color: var(--primary-color-light);
+    --secondary-color: var(--secondary-color-light);
+    --avatar-color: var(--secondary-color-light);
+    --text-color: var(--primary-color-dark);
+    --button-color: var(--tertiary-color);
+    --button-text: var(--primary-color-light);
   }
 
   body {
