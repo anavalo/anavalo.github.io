@@ -4,9 +4,9 @@
 
 <script setup lang="ts">
 useServerSeoMeta({
-  title: 'Tasos Tsournos',
+  title: 'Tasos Tsournos | Software Engineer',
   ogUrl: 'https://tsournos.com',
-  ogTitle: 'Tasos Tsournos',
+  ogTitle: 'Tasos Tsournos | Software Engineer',
   author: 'Tasos Tsournos',
   description: 'Tasos codes, writes and sometimes runs',
   ogDescription: 'Tasos codes, writes and sometimes runs',

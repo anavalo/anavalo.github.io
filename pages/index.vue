@@ -8,9 +8,8 @@
           <span class="subtitle">I code, read, write and sometimes run.</span>
           <span class="subtitle"
             >Developing amazing products for
-            <NuxtLink to="https://moveo.ai" target="_blank"
-              >Môveo.AI</NuxtLink
-            ></span
+            <NuxtLink to="https://moveo.ai" target="_blank">Môveo.AI</NuxtLink
+            >.</span
           >
         </span>
       </div>
@@ -85,6 +84,11 @@
       align-items: baseline;
       padding-top: var(--space-32);
     }
+
+    @include phone {
+      padding-bottom: var(--space-8);
+      gap: var(--space-16);
+    }
   }
 
   .right {
@@ -99,6 +103,12 @@
       grid-column: 1;
       padding: var(--space-32);
       padding-top: 0;
+    }
+
+    @include phone-small {
+      button:not(:first-child) {
+        display: none;
+      }
     }
   }
 }
