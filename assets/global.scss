@@ -13,8 +13,8 @@
     --secondary-color: var(--secondary-color-dark);
     --avatar-color: var(--tertiary-color);
     --text-color: var(--tertiary-color);
-    --button-color: var(--secondary-color-dark);
-    --button-text: var(--tertiary-color);
+    --button-color: var(--tertiary-color);
+    --button-text: var(--tertiary-color-dark);
   }
 
   &.light-mode {
@@ -23,7 +23,7 @@
     --avatar-color: var(--secondary-color-light);
     --text-color: var(--primary-color-dark);
     --button-color: var(--tertiary-color);
-    --button-text: var(--primary-color-light);
+    --button-text: var(--tertiary-color-dark);
   }
 
   body {
@@ -35,5 +35,11 @@
   #__nuxt {
     height: 100%;
     overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  p {
+    margin: 0;
   }
 }

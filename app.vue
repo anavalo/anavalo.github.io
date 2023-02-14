@@ -10,7 +10,7 @@ useServerSeoMeta({
   author: 'Tasos Tsournos',
   description: 'Tasos codes, writes and sometimes runs',
   ogDescription: 'Tasos codes, writes and sometimes runs',
-  viewport: { maximumScale: 1, minimumScale: 1, width: 'device-width' },
+  viewport: { initialScale: 1, width: 'device-width' },
 });
 
 useHead({

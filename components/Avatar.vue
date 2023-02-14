@@ -1,6 +1,6 @@
 <template>
   <div class="img_wrapper">
-    <img src="/tasos.jpeg" alt="tasos" />
+    <img src="/tasos.jpg" alt="tasos" />
   </div>
 </template>
 
