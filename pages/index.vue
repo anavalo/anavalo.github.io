@@ -8,7 +8,7 @@
           <p>I code, read, write and sometimes run.</p>
           <p>
             Building amazing products for
-            <NuxtLink to="https://moveo.ai" target="_blank">Môveo.AI</NuxtLink>.
+            <NuxtLink to="https://moveo.ai" target="_blank">Moveo.AI</NuxtLink>.
           </p>
         </span>
       </div>
@@ -24,9 +24,7 @@
             ><IconsLinkdedin
           /></Button>
 
-          <Button
-            :to="'https://soundcloud.com/anastasios-tsournos/likes'"
-            :text="'SoundCloud'"
+          <Button :to="'https://dev.to/anavalo'" :text="'Blog'"
             ><IconsSoundcloud
           /></Button>
         </div>
