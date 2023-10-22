@@ -27,6 +27,7 @@
           <Button :to="'https://dev.to/anavalo'" :text="'Blog'"
             ><IconsSoundcloud
           /></Button>
+          <!-- <NuxtLink to="blog">blog</NuxtLink> -->
         </div>
       </div>
     </div>
