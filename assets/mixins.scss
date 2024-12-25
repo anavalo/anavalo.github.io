@@ -15,13 +15,16 @@
   font-family: var(--font-primary);
   font-size: var(--space-20);
   font-weight: 400;
-  letter-spacing: 0;
-  line-height: var(--space-20);
+  line-height: var(--space-26);
 
   @include phone {
     font-size: var(--space-16);
-    line-height: var(--space-18);
   }
+}
+
+@mixin body-regular-italic {
+  @include body-regular;
+  font-style: italic;
 }
 
 @mixin body-medium {

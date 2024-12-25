@@ -23,8 +23,8 @@ defineProps({
 .button_wrapper {
   @include body-regular;
 
-  height: var(--space-84);
-  border-radius: var(--space-84);
+  height: var(--space-72);
+  border-radius: var(--space-72);
   width: 100%;
   background: var(--button-color);
   cursor: pointer;
@@ -43,21 +43,21 @@ defineProps({
   }
 
   @include desktop {
-    height: var(--space-80);
-    border-radius: var(--space-80);
+    height: var(--space-64);
+    border-radius: var(--space-64);
   }
 
   @include tablet {
-    height: var(--space-72);
-    border-radius: var(--space-72);
+    height: var(--space-64);
+    border-radius: var(--space-64);
   }
 
   @include phone {
-    height: var(--space-64);
+    height: var(--space-52);
   }
 
   @include phone-small {
-    height: var(--space-52);
+    height: var(--space-44);
   }
 
   .link {

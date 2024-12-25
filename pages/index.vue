@@ -3,13 +3,11 @@
     <div class="inner_card_wrapper">
       <div class="left">
         <div class="avatar"><Avatar /></div>
-        <h1 class="title">Hi there 👋 I am Tasos</h1>
+        <h1 class="header">Tasos Tsournos</h1>
+        <h2 class="subheader">Software Engineer</h2>
         <span class="subtitle_wrapper">
-          <p>I code, read, write and sometimes run.</p>
-          <p>
-            Building amazing products for
-            <NuxtLink to="https://moveo.ai" target="_blank">Moveo.AI</NuxtLink>.
-          </p>
+          Building resilient, cloud-native SaaS platforms with Kubernetes,
+          Node.js, and React.
         </span>
       </div>
       <div class="right">
@@ -45,7 +43,7 @@
 
   .left {
     grid-column: 1;
-    padding: var(--space-96) var(--space-44) var(--space-32) var(--space-44);
+    padding: var(--space-64) var(--space-44) var(--space-32) var(--space-44);
     display: flex;
     flex-direction: column;
     border-right: 1px solid var(--primary-color);
@@ -62,23 +60,11 @@
       }
     }
 
-    .title {
+    .header {
       @include heading-regular;
 
       color: var(--text-color);
-      padding-bottom: var(--space-32);
-
-      @include tablet {
-        padding-bottom: var(--space-32);
-      }
-
-      @include phone {
-        padding-bottom: var(--space-16);
-      }
-
-      @include phone-small {
-        padding-bottom: var(--space-8);
-      }
+      padding-bottom: var(--space-8);
     }
 
     .subtitle_wrapper {
@@ -96,17 +82,38 @@
 
       @include tablet {
         align-items: center;
+        text-align: center;
+      }
+    }
+
+    .subheader {
+      @include body-regular-italic;
+      color: var(--text-color-secondary);
+      padding-bottom: var(--space-16);
+
+      padding-bottom: var(--space-32);
+
+      @include tablet {
+        padding-bottom: var(--space-32);
+      }
+
+      @include phone {
+        padding-bottom: var(--space-16);
+      }
+
+      @include phone-small {
+        padding-bottom: var(--space-8);
       }
     }
 
     @include tablet {
       justify-content: center;
       align-items: center;
-      padding: var(--space-96) var(--space-32) var(--space-32) var(--space-32);
+      padding: var(--space-64) var(--space-32) var(--space-32) var(--space-32);
     }
 
     @include phone {
-      padding-top: var(--space-32);
+      padding-top: var(--space-64);
     }
 
     @include phone-small {
@@ -158,8 +165,6 @@
   }
 
   @include phone {
-    justify-content: space-evenly;
-    gap: 0;
   }
 }
 </style>
