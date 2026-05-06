@@ -30,10 +30,7 @@
 
       <section class="about line line--5">
         <p class="prompt-line"><span class="prompt">&gt;</span> cat about.txt</p>
-        <p class="about__body">
-          Building resilient, cloud-native SaaS platforms with Kubernetes,
-          Node.js, and React.
-        </p>
+        <p class="about__body">keeps prod boring.</p>
       </section>
 
       <section class="links line line--6">
