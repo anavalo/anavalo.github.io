@@ -2,46 +2,169 @@
 
 :root {
   height: 100%;
-  overflow-x: hidden;
   box-sizing: border-box;
-  font: var(--font-primary);
-  background-color: var(--primary-color);
-  transition: background-color 0.5s;
+  background-color: var(--bg);
+  color: var(--phosphor);
+  transition: background-color 0.4s, color 0.4s;
 
   &.dark-mode {
-    --primary-color: var(--primary-color-dark);
-    --secondary-color: var(--secondary-color-dark);
-    --avatar-color: var(--tertiary-color);
-    --text-color: var(--tertiary-color);
-    --text-color-secondary: #76e4a2;
-    --button-color: var(--tertiary-color);
-    --button-text: var(--tertiary-color-dark);
+    --bg: var(--green-bg);
+    --bg-frame: var(--green-bg-frame);
+    --phosphor: var(--green-phosphor);
+    --phosphor-dim: var(--green-phosphor-dim);
+    --phosphor-glow: var(--green-phosphor-glow);
+    --text-mute: var(--green-text-mute);
   }
 
   &.light-mode {
-    --primary-color: var(--primary-color-light);
-    --secondary-color: var(--secondary-color-light);
-    --avatar-color: var(--secondary-color-light);
-    --text-color: var(--primary-color-dark);
-    --text-color-secondary: #445a61;
-    --button-color: var(--tertiary-color);
-    --button-text: var(--tertiary-color-dark);
+    --bg: var(--amber-bg);
+    --bg-frame: var(--amber-bg-frame);
+    --phosphor: var(--amber-phosphor);
+    --phosphor-dim: var(--amber-phosphor-dim);
+    --phosphor-glow: var(--amber-phosphor-glow);
+    --text-mute: var(--amber-text-mute);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-mono);
+  background-color: var(--bg);
+  color: var(--phosphor);
+  overflow-x: hidden;
+  position: relative;
+
+  // scanlines
+  &::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      var(--scanline) 2px,
+      var(--scanline) 3px
+    );
+
+    @include phone {
+      background: repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 1px,
+        var(--scanline) 1px,
+        var(--scanline) 2px
+      );
+    }
   }
 
+  // vignette
+  &::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9997;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+  }
+}
+
+#__nuxt {
+  height: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--phosphor);
+  color: var(--bg);
+}
+
+// flicker — disabled if user prefers reduced motion or on touch (mobile gets too noisy)
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
   body {
-    height: 100%;
-    overflow-x: hidden;
-    margin: 0;
+    animation: crt-flicker 4.2s infinite;
   }
+}
 
-  #__nuxt {
-    height: 100%;
-    overflow-x: hidden;
+@keyframes crt-flicker {
+  0%,
+  92%,
+  100% {
+    opacity: 1;
   }
+  93% {
+    opacity: 0.96;
+  }
+  94% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.93;
+  }
+  97% {
+    opacity: 1;
+  }
+}
 
-  h1,
-  h2,
-  p {
-    margin: 0;
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes type-in {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

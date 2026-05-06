@@ -1,72 +1,90 @@
 <template>
-  <button class="button_wrapper">
-    <NuxtLink :to="to" target="_blank" class="link"
-      >{{ text }}<slot
-    /></NuxtLink>
-  </button>
+  <NuxtLink :to="to" target="_blank" rel="noopener" class="row">
+    <span class="bullet" aria-hidden="true">▸</span>
+    <span class="label">{{ text }}</span>
+    <span class="dots" aria-hidden="true"></span>
+    <span class="handle">{{ handle }}</span>
+    <span class="arrow" aria-hidden="true">↗</span>
+  </NuxtLink>
 </template>
 
 <script setup>
 defineProps({
-  to: {
-    type: String,
-    required: true,
-  },
-  text: {
-    type: String,
-    required: true,
-  },
+  to: { type: String, required: true },
+  text: { type: String, required: true },
+  handle: { type: String, default: '' },
 });
 </script>
 
-<style lang="scss">
-.button_wrapper {
-  @include body-regular;
-
-  height: var(--space-72);
-  border-radius: var(--space-72);
-  width: 100%;
-  background: var(--button-color);
+<style lang="scss" scoped>
+.row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  align-items: baseline;
+  gap: var(--space-12);
+  padding: var(--space-16) var(--space-12);
+  min-height: 48px;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--phosphor);
+  border-top: 1px dashed var(--phosphor-dim);
   cursor: pointer;
-  border: none;
-  will-change: transform;
-  transition: transform 600ms;
+  transition: background-color 120ms, color 120ms, padding-left 180ms;
 
-  a {
-    color: var(--button-text);
-    text-decoration: none;
+  &:last-child {
+    border-bottom: 1px dashed var(--phosphor-dim);
   }
 
-  &:hover {
-    transition: transform 125ms;
-    transform: scale(1.02);
-  }
+  &:hover,
+  &:focus-visible {
+    background: var(--phosphor);
+    color: var(--bg);
+    padding-left: var(--space-20);
+    outline: none;
 
-  @include desktop {
-    height: var(--space-64);
-    border-radius: var(--space-64);
-  }
-
-  @include tablet {
-    height: var(--space-64);
-    border-radius: var(--space-64);
+    .handle,
+    .dots,
+    .bullet,
+    .arrow {
+      color: var(--bg);
+    }
   }
 
   @include phone {
-    height: var(--space-52);
+    font-size: 0.92rem;
+    padding: var(--space-12) var(--space-8);
+    gap: var(--space-8);
   }
+}
+
+.bullet {
+  color: var(--phosphor);
+  font-weight: 700;
+}
+
+.label {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.dots {
+  border-bottom: 1px dotted var(--phosphor-dim);
+  height: 1px;
+  align-self: center;
+  min-width: 1rem;
+}
+
+.handle {
+  color: var(--text-mute);
+  font-size: 0.85rem;
 
   @include phone-small {
-    height: var(--space-44);
+    display: none;
   }
+}
 
-  .link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    gap: var(--space-16);
-  }
+.arrow {
+  color: var(--phosphor-dim);
+  font-size: 0.95rem;
 }
 </style>

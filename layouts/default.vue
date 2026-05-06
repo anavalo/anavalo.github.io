@@ -2,11 +2,17 @@
   <div class="default_wrapper"><slot /></div>
 </template>
 
-<styles lang="scss" scoped>
+<style lang="scss" scoped>
 .default_wrapper {
-  height: 100%;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: var(--space-16) 0;
+
+  @include phone {
+    padding: 0;
+    align-items: stretch;
+  }
 }
-</styles>
+</style>

@@ -8,8 +8,9 @@ useServerSeoMeta({
   ogUrl: 'https://tsournos.com',
   ogTitle: 'Tasos Tsournos | Software Engineer',
   author: 'Tasos Tsournos',
-  description: 'Tasos codes, writes and sometimes runs',
-  ogDescription: 'Tasos codes, writes and sometimes runs',
+  description: 'Tasos codes, writes, sometimes runs.',
+  ogDescription: 'Tasos codes, writes, sometimes runs.',
+  themeColor: '#0a0e0a',
   viewport: { initialScale: 1, width: 'device-width' },
 });
 
