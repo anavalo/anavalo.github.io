@@ -11,7 +11,7 @@
         <dl class="meta__list line line--4">
           <div class="meta__row">
             <dt>[role]</dt>
-            <dd>software engineer</dd>
+            <dd>software & infrastructure engineer</dd>
           </div>
           <div class="meta__row">
             <dt>[bio]</dt>
