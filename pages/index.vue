@@ -15,7 +15,7 @@
           </div>
           <div class="meta__row">
             <dt>[bio]</dt>
-            <dd>codes, writes, sometimes runs</dd>
+            <dd>codes, reads, writes, sometimes runs</dd>
           </div>
           <div class="meta__row">
             <dt>[stack]</dt>
