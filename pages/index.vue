@@ -47,6 +47,7 @@
             handle="anastasios-tsournos"
           />
           <Button to="https://dev.to/anavalo" text="blog" handle="dev.to/anavalo" />
+          <Button to="/tokenophobia" text="tokenophobia" handle="noun, coined 2026" />
         </nav>
       </section>
 
@@ -58,6 +59,25 @@
 </template>
 
 <script setup>
+useSeoMeta({
+  title: 'Tasos Tsournos',
+  description:
+    'Software & infrastructure engineer. Keeps prod boring. k8s · node · react.',
+  ogTitle: 'Tasos Tsournos',
+  ogDescription:
+    'Software & infrastructure engineer. Keeps prod boring.',
+  ogUrl: 'https://www.tsournos.com/',
+  ogType: 'website',
+  twitterCard: 'summary',
+  twitterTitle: 'Tasos Tsournos',
+  twitterDescription:
+    'Software & infrastructure engineer. Keeps prod boring.',
+});
+
+useHead({
+  link: [{ rel: 'canonical', href: 'https://www.tsournos.com/' }],
+});
+
 const booted = ref(false);
 
 onMounted(() => {

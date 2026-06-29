@@ -1,19 +1,26 @@
 <template>
-  <NuxtLink :to="to" target="_blank" rel="noopener" class="row">
+  <NuxtLink
+    :to="to"
+    :target="external ? '_blank' : undefined"
+    :rel="external ? 'noopener' : undefined"
+    class="row"
+  >
     <span class="bullet" aria-hidden="true">▸</span>
     <span class="label">{{ text }}</span>
     <span class="dots" aria-hidden="true"></span>
     <span class="handle">{{ handle }}</span>
-    <span class="arrow" aria-hidden="true">↗</span>
+    <span class="arrow" aria-hidden="true">{{ external ? '↗' : '→' }}</span>
   </NuxtLink>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   to: { type: String, required: true },
   text: { type: String, required: true },
   handle: { type: String, default: '' },
 });
+
+const external = computed(() => /^https?:\/\//.test(props.to));
 </script>
 
 <style lang="scss" scoped>
