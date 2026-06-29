@@ -57,8 +57,8 @@
           pure <em>tokenophobia</em>."
         </blockquote>
         <blockquote class="usage__example">
-          "His <em>tokenophobia</em> kept him from starting the
-          code review."
+          "I keep four Claude Code tabs open until I hit my
+          session limit. Pure <em>tokenophobia</em>."
         </blockquote>
       </section>
 
