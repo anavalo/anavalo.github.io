@@ -74,7 +74,7 @@
       <section class="attrib line line--8">
         <h2 class="section-label">first known use</h2>
         <p class="attrib__body">
-          Coined by Anastasios Tsournos, 2026.
+          Coined by Anastasios Tsournos, June 10, 2026.
         </p>
         <p class="attrib__source">
           <span class="attrib__arrow">↳</span>
@@ -154,7 +154,7 @@ useHead({
             'https://github.com/anavalo',
           ],
         },
-        dateCreated: '2026',
+        dateCreated: '2026-06-10T16:13:40',
       }),
     },
   ],
@@ -175,7 +175,7 @@ onMounted(() => {
 
 function copyCitation() {
   const text =
-    'tokenophobia (n.) — coined by Anastasios Tsournos, 2026. https://www.tsournos.com/tokenophobia';
+    'tokenophobia (n.) — coined by Anastasios Tsournos, June 10, 2026. https://www.tsournos.com/tokenophobia';
   navigator.clipboard.writeText(text).then(() => {
     copied.value = true;
     setTimeout(() => {
